@@ -1,0 +1,9 @@
+query FetchInfo($slug: String!) {
+  pages(filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        ...Info
+      }
+    }
+  }
+}

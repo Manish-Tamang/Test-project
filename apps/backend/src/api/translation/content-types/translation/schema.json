@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "translations",
+  "info": {
+    "singularName": "translation",
+    "pluralName": "translations",
+    "displayName": "Translation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paginationNextPage": {
+      "type": "string",
+      "default": "Next Page",
+      "required": true
+    },
+    "articleReadMore": {
+      "type": "string",
+      "default": "Read More",
+      "required": true
+    }
+  }
+}

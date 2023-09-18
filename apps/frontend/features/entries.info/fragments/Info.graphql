@@ -1,0 +1,8 @@
+fragment Info on Page {
+  content
+  slug
+  title
+  createdAt
+  publishedAt
+  updatedAt
+}

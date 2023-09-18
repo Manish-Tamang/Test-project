@@ -1,0 +1,20 @@
+query FetchHomepage {
+  homepage {
+    data {
+      attributes {
+        seo {
+          ...Seo
+        }
+        articlesSection {
+          ...articlesSection
+        }
+      }
+    }
+  }
+}
+
+fragment articlesSection on ComponentArticlesArticlesSection {
+  header
+  entriesPerPage
+  previewMaxCharacters
+}

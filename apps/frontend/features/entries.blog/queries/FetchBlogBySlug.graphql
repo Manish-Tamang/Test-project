@@ -1,0 +1,37 @@
+query FetchBlogBySlug($slug: String) {
+  articles(filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        title
+        content
+        slug
+        createdAt
+        publishedAt
+        updatedAt
+        category {
+          data {
+            attributes {
+              name
+              slug
+            }
+          }
+        }
+        seo {
+          ...Seo
+        }
+        author {
+          data {
+            ...Author
+          }
+        }
+        image {
+          data {
+            attributes {
+              ...Image
+            }
+          }
+        }
+      }
+    }
+  }
+}

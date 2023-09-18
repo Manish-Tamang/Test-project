@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.2",
+    "@exfabrica/strapi-plugin-awesome-help": "^1.0.8",
+    "@strapi-community/strapi-plugin-url-alias": "^1.0.0-alpha.4",
+    "@strapi/plugin-graphql": "^4.3.4",
+    "@strapi/plugin-i18n": "^4.3.4",
+    "@strapi/plugin-seo": "^1.7.4",
+    "@strapi/plugin-users-permissions": "^4.3.4",
+    "@strapi/strapi": "^4.3.4",
+    "lodash.set": "^4.3.2",
+    "mime-types": "^2.1.35",
+    "mysql": "^2.18.1",
+    "strapi-plugin-meilisearch": "^0.7.1",
+    "strapi-plugin-navigation": "^2.2.1",
+    "strapi-plugin-placeholder": "^4.1.7",
+    "strapi-plugin-publisher": "^1.1.3"
+  },
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "0ef42828-e794-4f7b-b7d7-308de87c569b",
+    "template": "@strapi/template-blog@1.0.0"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

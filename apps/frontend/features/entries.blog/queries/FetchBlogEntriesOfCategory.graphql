@@ -1,0 +1,51 @@
+query FetchBlogEntriesOfCategory($entriesPerPage: Int, $slug: String) {
+  categories(filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        seo {
+          ...Seo
+        }
+        name
+        articles(
+          sort: "createdAt:desc"
+          pagination: { limit: $entriesPerPage }
+        ) {
+          data {
+            id
+            attributes {
+              title
+              content
+              slug
+              image {
+                data {
+                  attributes {
+                    ...Image
+                  }
+                }
+              }
+              category {
+                data {
+                  attributes {
+                    name
+                    slug
+                  }
+                }
+              }
+              author {
+                data {
+                  ...Author
+                }
+              }
+              createdAt
+              updatedAt
+              publishedAt
+              seo {
+                ...Seo
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

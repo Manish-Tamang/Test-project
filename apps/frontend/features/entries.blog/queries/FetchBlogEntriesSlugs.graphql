@@ -1,0 +1,10 @@
+query FetchBlogEntriesSlugs {
+  articles {
+    data {
+      id
+      attributes {
+        slug
+      }
+    }
+  }
+}

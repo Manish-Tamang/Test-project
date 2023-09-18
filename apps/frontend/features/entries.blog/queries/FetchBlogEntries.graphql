@@ -1,0 +1,38 @@
+query FetchBlogEntries($articlesPerPage: Int) {
+  articles(sort: "createdAt:desc", pagination: { limit: $articlesPerPage }) {
+    data {
+      id
+      attributes {
+        title
+        content
+        slug
+        image {
+          data {
+            attributes {
+              ...Image
+            }
+          }
+        }
+        category {
+          data {
+            attributes {
+              name
+              slug
+            }
+          }
+        }
+        author {
+          data {
+            ...Author
+          }
+        }
+        createdAt
+        updatedAt
+        publishedAt
+        seo {
+          ...Seo
+        }
+      }
+    }
+  }
+}
